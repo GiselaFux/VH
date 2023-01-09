@@ -1,0 +1,652 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: forestgreen;
+}
+
+/*header*/
+header {
+  width: 100%;
+  position: fixed;
+  margin-top: 0px;
+  z-index: 2;
+}
+
+.banner-big {
+  width: 100%;
+  max-height: 20vh
+}
+
+.banner-big img {
+  width: 100%;
+  max-height: 20vh;
+}
+
+header nav {
+  background-color: chartreuse;
+  z-index: 1000;
+  max-width: 100%;
+  /*width:95%;
+   margin: auto 20px; */
+}
+
+header nav ul {
+  list-style: none;
+}
+
+/*para q se vea al abrir sub categorias*/
+header nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+header nav ul li:hover {
+  background-color: forestgreen;
+}
+
+header nav ul li a {
+  color: whitesmoke;
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+}
+
+header nav ul li a span {
+  margin-right: 10px;
+}
+
+.menu_bar {
+  display: none;
+}
+
+/*los subelementos children deben estar oculto con posicion absoluta en relacin a su padre*/
+header nav ul li .children {
+  display: none;
+  background-color: forestgreen;
+  position: absolute;
+  width: 150%;
+  z-index: 1000;
+}
+
+header nav ul li .children li {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid rgb(255, 255, 255, .5);
+}
+
+header nav ul li .children li a {
+  display: block;
+}
+
+/*submenu los children se muestran */
+header nav ul li:hover .children {
+  display: block;
+}
+
+header nav ul li .caret {
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+/*clima-mapa*/
+.clima-mapa {
+  background-color: forestgreen;
+  width: 100%;
+  height: auto;
+  padding-top: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* clima */
+.contenedor-clima {
+  width: 30vw;
+  /* margin-left: 1.5vw;
+  margin-top: 1.5vh; */
+  padding: 2px 3px;
+  background-color: whitesmoke;
+  border-style: double;
+  border-radius: 10px;
+}
+
+.caja1 {
+  width: 19vw;
+  border-style: ridge;
+  padding-left: 10vw;
+  padding-top: 2px;
+}
+
+.caja2 {
+  width: 19vw;
+  border-style: ridge;
+  padding-left: 10vw;
+  padding-top: 2px;
+}
+
+.caja3 {
+  width: 19vw;
+  border-style: ridge;
+  padding-left: 10vw;
+}
+
+.mapaValleHermoso {
+  width: 25vw;
+  height: 25vh;
+  margin-top: 1.5vh;
+}
+
+.titulo-mapa h4 {
+  padding-left: 1vw;
+}
+
+iframe {
+  max-width: 100%;
+  height: 23vh;
+  border-style: double;
+  border-radius: 10px;
+
+}
+
+/* div typed */
+.textCarruselActividades {
+  width: 100%;
+  padding: 1vh 20vw;
+  margin-top: 3vh;
+  color: black;
+  background-color: greenyellow;
+}
+
+/* carrusel */
+#carrusel-caja {
+  -moz-animation: automatizacion 15s infinite linear;
+  -o-animation: automatizacion 15s infinite linear;
+  -webkit-animation: automatizacion 15s infinite linear;
+  animation: automatizacion 15s infinite linear;
+
+  -webkit-transition: all 0.75s ease;
+  -moz-transition: all 0.75s ease;
+  -ms-transition: all 0.75s ease;
+  -o-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+
+  height: 200px;
+  width: 300%;
+
+  align-items: center;
+}
+
+#carrusel-contenido {
+  background-color: forestgreen;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imagenes {
+  height: 12%;
+  width: 40%;
+  margin: 3% 30%
+}
+
+.carrusel-elemento {
+  float: left;
+  width: 33.333%;
+}
+
+@-moz-keyframes automatizacion {
+  0% {
+    margin-left: 0;
+  }
+
+  30% {
+    margin-left: 0;
+  }
+
+  35% {
+    margin-left: -100%;
+  }
+
+  65% {
+    margin-left: -100%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  95% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes automatizacion {
+  0% {
+    margin-left: 0;
+  }
+
+  30% {
+    margin-left: 0;
+  }
+
+  35% {
+    margin-left: -100%;
+  }
+
+  65% {
+    margin-left: -100%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  95% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes automatizacion {
+  0% {
+    margin-left: 0;
+  }
+
+  30% {
+    margin-left: 0;
+  }
+
+  35% {
+    margin-left: -100%;
+  }
+
+  65% {
+    margin-left: -100%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  95% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.contenedorProyecto {
+  margin-top: 8rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: forestgreen;
+}
+
+.titulo h1 {
+  color: black;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 4%;
+  z-index: 1;
+}
+
+.titulo {
+  width: 100%;
+  padding-left: 35vw;
+}
+
+/* h1 {
+  color: #4fffd0;
+} */
+
+
+.tarjeta {
+  color: forestgreen;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 3s;
+}
+
+.card .face-front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0px 5px 10px #4fffd0;
+  background-color: whitesmoke;
+}
+
+.card .face-front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .face-back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: whitesmoke;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0px 5px 10px #4fffd0;
+}
+
+
+.card .face-back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .face-front {
+  transform: perspective(600px)rotateY(180deg)
+}
+
+.card:hover .face-back {
+  transform: perspective(600px)rotateY(360deg)
+}
+
+@media screen and (max-width:800px) {
+  body {
+    padding-top: 200px;
+  }
+
+  .banner-big {
+    display: none;
+  }
+
+  .banner {
+    width: 100%;
+    max-height: 20vh
+  }
+
+  .banner img {
+    width: 100%;
+    max-height: 20vh;
+  }
+
+  .menu_bar {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: chartreuse;
+  }
+
+  .menu_bar .bt-menu {
+    display: block;
+    padding: 20px;
+    color:black;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /*cambio de lugar y separo la plabra menu del icono*/
+  .menu_bar span {
+    float: right;
+    font-size: 40px;
+  }
+
+  /*desplazo el gob serv y lo dejo para trabajar con js*/
+  /*con height calc calculo el header para q al scrolear muestre todo*/
+  header nav {
+    width: 80%;
+    height: calc(100%- - 200px);
+    position: fixed;
+    right: 100%;
+    margin: 0;
+    overflow-y: scroll;
+  }
+
+  header nav ul li {
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+  }
+
+  header nav ul li a {
+    display: block;
+  }
+
+  /* header nav ul li:hover .children{
+    display:none;
+  }  */
+  header nav ul li .children {
+    width: 100%;
+    position: relative;
+  }
+
+  header nav ul li .children li a {
+    margin-left: 20px;
+  }
+
+  header nav ul li .caret {
+    float: right;
+  }
+}
+
+/* clima */
+.contenedor-clima {
+  width: 16vw;
+  /* margin-left: 1.5vw;
+  margin-top: 5.5vh; */
+  padding: 1px;
+  background-color: whitesmoke;
+  border-style: double;
+  border-radius: 10px;
+
+}
+
+.caja1 {
+  width: 15vw;
+  border-style: ridge;
+  padding-left: 1vw;
+  padding-top: 2px;
+}
+
+.caja2 {
+  width: 15vw;
+  border-style: ridge;
+  padding-left: 1vw;
+  padding-top: 2px;
+}
+
+.caja3 {
+  width: 15vw;
+  border-style: ridge;
+  padding-left: 1vw;
+}
+
+@media only screen and (min-device-width: 239px) and (max-device-width: 769px) {
+  header {
+    z-index: 2;
+  }
+  
+
+  .clima-mapa {
+    background-color: forestgreen;
+    width: 100%;
+    height: auto;
+    padding-top: 5vh;
+  }
+
+  .contenedor-clima {
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 3.5vh;
+    padding: 1px;
+    background-color: whitesmoke;
+    border-style: double;
+    border-radius: 10px;
+  }
+
+  .caja1 {
+    width: 39vw;
+    border-style: ridge;
+    padding-left: 1vw;
+    padding-top: 2px;
+  }
+
+  .caja2 {
+    width: 39vw;
+    border-style: ridge;
+    padding-left: 1vw;
+    padding-top: 2px;
+  }
+
+  .caja3 {
+    width: 39vw;
+    border-style: ridge;
+    padding-left: 1vw;
+  }
+
+  /*clima-mapa*/
+  .clima-mapa {
+    width: 100%;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .mapaValleHermoso {
+    width: 100%;
+    margin: 2.5vh 15vw;
+
+  }
+
+  .titulo-mapa h4 {
+    padding-left: 1vw;
+  }
+
+  iframe {
+    max-width: fit-content;
+    min-width: fit-content;
+    border-style: double;
+    border-radius: 10px;
+  }
+
+  /* div typed */
+  .textCarruselActividades {
+    width: 100%;
+  }
+
+  .textCarruselActividades h2 {
+    width: 100vw;
+    font-size: 1rem;
+    padding: 1vh;
+    margin-top: 3vh;
+  }
+}
+
+/* cartas giratorias */
+.contenedorProyecto {
+  margin-top: 8rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 15%;
+  background-color: chartreuse;
+}
+
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 4%;
+  z-index: 1;
+}
+
+.titulo {
+  width: 100%;
+  padding-left: 35vw;
+}
+
+h1 {
+  color: #4fffd0;
+}
+
+
+.tarjeta {
+  color: forestgreen;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 3s;
+}
+
+.card .face-front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0px 5px 10px #4fffd0;
+  background-color: whitesmoke;
+}
+
+.card .face-front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .face-back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: whitesmoke;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0px 5px 10px #4fffd0;
+}
+
+
+.card .face-back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .face-front {
+  transform: perspective(600px)rotateY(180deg)
+}
+
+.card:hover .face-back {
+  transform: perspective(600px)rotateY(360deg)
+}
